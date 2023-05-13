@@ -1,18 +1,14 @@
-// erişim belirteçi
+package mypackage;// erişim belirteçi
 
 // Encapsulation
+// Inheritance => Miras,Kalıtım
 // constructor
-public class Student {
-    // default = public
-    // sensitive data
-    // private = sadece ve sadece ilgili class içerisinden erişim sağla.
-    // public = dış classlar için erişime açık alanlar.
-    // protected
-    private int number;
-    private String name;
 
-    // getter => ilgili alanın değerinin alınabileceği fonksiyonu
-    // setter => ilgili alanın değerinin atanabileceği fonksiyonu
+// Subclass - Superclass
+public class Student extends Human
+{
+    private int number;
+
     public int getNumber(){
         return number;
     }
@@ -22,30 +18,20 @@ public class Student {
         this.number = number;
     }
 
-    // sol alt + insert
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Student()
     {
         System.out.println("Bir öğrenci örneği oluşturuldu!");
     }
-    public Student(int number, String name){
+    public Student(int number,String name, String surname){
         System.out.println("Numara ve ismi bilinen bir öğrenci örneği oluşturuldu!");
         this.number = number;
         this.name = name;
+        this.surname = surname;
     }
-
     public void joinClass(String className)
     {
         System.out.println(name + " isimli öğrenci " + className + " isimli derse katıldı.");
     }
 }
-//instance
-// 18.00
 
 

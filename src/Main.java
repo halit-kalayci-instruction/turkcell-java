@@ -1,3 +1,6 @@
+import mypackage.Student;
+import mypackage.Teacher;
+
 public class Main {
     public static void main(String[] args) {
         // OOP => Object Oriented Programming = Nesne Yönelimli Programlama
@@ -21,10 +24,14 @@ public class Main {
         student2.setName("Mehmet");
         student2.joinClass("Yazılım");
 
-        Student student3 = new Student(1, "Halit");
+        Student student3 = new Student(1, "Halit","Kalaycı");
+        student3.breathe();
         student3.joinClass("Matematik");
 
-        //Student student4 = new Student(5);
+        Teacher teacher = new Teacher("Engin","Demiroğ","Java");
+        teacher.breathe();
+        System.out.println(teacher.getName() + " " + teacher.getSurname() + " "  + teacher.getLessonName());
+        //mypackage.Student student4 = new mypackage.Student(5);
 
         /*
         System.out.println(student1.number + " numaralı öğrencinin ismi: " + student1.name);
